@@ -47,5 +47,56 @@ As per the code flow the first page which takes place to run is main.js, this pa
 
 **Adding Extension in Vue JS**
 
-1. vue (syntax highlight for vuejs) *jcbuisson*
-2. vue format (a beutify extension for .vue file) *fc_bean*
+1. vue (syntax highlight for vuejs) *jcbuisson* (or any updated extension of your choice)
+2. vue format (a beutify extension for .vue file) *fc_bean*  (or any updated extension of your choice)
+
+**Making our first component**
+
+*Component :* Components are basically the building blocks of a website, which combine together to form a particular web application.
+(Chunk of code which basically defins a specific functionality and which can is re-usable in nature.)
+
+**Creating a component**
+
+under the folder src, under component folder create a file named Home.vue with three base tags : template, script and style, as:
+
+<template>
+    <h1>Hello component</h1>
+</template>
+
+<style></style>
+
+<script>
+    export default {
+        name : 'HelloComponent'
+    }
+</script>
+
+and update App.vue as:
+
+<template>
+  <img alt="Vue logo" src="./assets/logo.png">
+  <Hello />
+</template>
+
+<script>
+import Hello from './components/Hello.vue'
+
+export default {
+  name: 'App',
+  components: {
+    Hello
+  }
+}
+</script>
+
+<style>
+
+</style>
+
+
+**Adding CSS to component**
+
+As we add CSS in the child component Hello.vue we can see that it targets all the h1 present in full website and changes the property for all, thus making it css property global.
+To avoid this we can simply add a key word *scoped* to the style tag as : 
+    *<style scoped></style>*
+
