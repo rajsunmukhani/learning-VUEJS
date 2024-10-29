@@ -1,6 +1,7 @@
 <template>
     <h1>Hello {{x}}</h1>
     <h1>Your Mobile Number is {{ getNumber() }}</h1>
+    <h1>Your Email : {{ getEmail('raj@gmail.com') }}</h1>
 </template>
 
 <style scoped>
@@ -17,6 +18,9 @@
                 x : 'Raj',
                 getNumber : function(){
                     return '7987'
+                },
+                getEmail : function(email){
+                    return email;
                 }
             }
         }
