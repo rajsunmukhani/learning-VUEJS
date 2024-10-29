@@ -1,5 +1,5 @@
 <template>
-    <h1>Hello component</h1>
+    <h1>Hello {{x}}</h1>
 </template>
 
 <style scoped>
@@ -10,6 +10,11 @@
 
 <script>
     export default {
-        name : 'HelloComponent'
+        name : 'HelloComponent',
+        data() {
+            return{
+                x : 'Raj'
+            }
+        }
     }
 </script>

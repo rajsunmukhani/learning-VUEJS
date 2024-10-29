@@ -100,3 +100,36 @@ As we add CSS in the child component Hello.vue we can see that it targets all th
 To avoid this we can simply add a key word *scoped* to the style tag as : 
     *<style scoped></style>*
 
+**Interpolation and dynamic data in VUE**
+
+*Ques :* What is *Interpolation*?
+*Ans :* *Interpolation* basically helps the programmer to use the functions, variables or other javascript things in html.To do so, programmer needs to use {{data}} (double curlly braces inside the html of template tag.)
+
+*Ques :* How interpolation works in Vue JS
+*Ans :* For making interpolation work in VUE JS we have to define variable, function or method first in script tag under some respective heads, and then we can use them in html present under template tags.
+
+**Making interpolation of variables**
+
+To make the dynamic value of variable visible in html, use data(){} attribute in script, which will return the key value paid of variables, and use the variable in double cursly braces in html as:
+
+<template>
+    <h1>Hello {{x}}</h1>
+</template>
+
+<style scoped>
+    h1{
+        color: red;
+    }
+</style>
+
+<script>
+    export default {
+        name : 'HelloComponent',
+        data() {
+            return{
+                x : 'Raj'
+            }
+        }
+    }
+</script>
+
