@@ -1,5 +1,6 @@
 <template>
     <h1>Hello {{x}}</h1>
+    <h1>Your Mobile Number is {{ getNumber() }}</h1>
 </template>
 
 <style scoped>
@@ -13,7 +14,10 @@
         name : 'HelloComponent',
         data() {
             return{
-                x : 'Raj'
+                x : 'Raj',
+                getNumber : function(){
+                    return '7987'
+                }
             }
         }
     }
