@@ -192,3 +192,78 @@ It is mostly similar to variable as :
         }
     }
 </script>
+
+
+**IMP : In vue JS value prop can be assigned with the value at the time of interpolation also, unlike angular.**
+
+**Methods in VueJS using *this***
+
+To define method we need to use a data property in script named *methods* as:
+
+methods : {
+    getNumber(){
+        return 7987
+    }
+}
+
+full :
+
+<template>
+    <h1>Hello {{x}}</h1>
+    <h1>Your Mobile Number is {{ getNumber() }}</h1>
+</template>
+
+<style scoped>
+    h1{
+        color: red;
+    }
+</style>
+
+<script>
+    export default {
+        name : 'HelloComponent',
+        data() {
+            return{
+                x : 'Raj',
+            }
+        },
+        methods : {
+            getNumber(){
+                return 7987
+            }
+        }
+    }
+</script>
+
+Now, what if have defined the data in variable above and want to use it in beow method, for that we will use *this* keyword as:
+
+<template>
+    <h1>Hello {{x}}</h1>
+    <h1>Your Mobile Number is {{ getNumber().number }}</h1>
+</template>
+
+<style scoped>
+    h1{
+        color: red;
+    }
+</style>
+
+<script>
+    export default {
+        name : 'HelloComponent',
+        data() {
+            return{
+                x : 'Raj',
+                number : '9223'
+            }
+        },
+        methods : {
+            getNumber(){
+                return {
+                    email : 'raj@gmail.com',
+                    number : this.number
+                }
+            }
+        }
+    }
+</script>
