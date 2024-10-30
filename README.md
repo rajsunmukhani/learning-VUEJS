@@ -335,4 +335,12 @@ Also, don forget to make the variable in script tag as:
     }
 
 *Now, just change the value of show manually and see the changes.*
+
+**For loop in VueJS**
+
+Following is the syntax to be applied to html element as an attribute :
+
+*v-for="**variable** in **dataset**" :key="**unique identifier as key**"*
+
+
     
