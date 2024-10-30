@@ -1,13 +1,23 @@
 <template>
-    <h1>Getting the value of input Feild</h1>
+    <h1>Getting the value of Checkboxes and Radio buttons</h1>
 
-    <input type="email" v-model="email" placeholder="Enter email" name="" id="">
     <br><br>
+    <label for="Node">Node</label> <input v-model="technology" value="Node" type="checkbox" name="" id="Node">
+    <label for="Java">Java</label> <input v-model="technology" value="Java" type="checkbox" name="" id="Java">
+    <label for="Javascript">Javascript</label> <input v-model="technology" value="Javascript" type="checkbox" name="" id="Javascript">
+    
+    <h3>Technologies: {{ technology }} </h3>
 
-    <input type="password" v-model="password" placeholder="Enter Password" name="" id="">
+
     <br><br>
+    <label for="Student">Student</label> <input v-model="who" value="Student" type="radio" name="identity" id="Student">
+    <label for="Fresher">Fresher</label> <input v-model="who" value="Fresher" type="radio" name="identity" id="Fresher">
+    <label for="working">Working prfessional</label> <input v-model="who" value="Working Professional" type="radio" name="identity" id="working">
+    
+    <h3>You are -  {{ who }} </h3>
 
-    <button type="button" v-on:click="getData()">Get values</button>
+
+
 </template>
 
 <style scoped>
@@ -19,13 +29,8 @@
         name : 'HelloComponent',
         data(){
             return {
-                email : null,
-                password : null
-            }
-        },
-        methods : {
-            getData(){
-                console.log('values :', this.email, this.password);
+                technology : [],
+                who : null
             }
         }
     }

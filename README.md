@@ -313,5 +313,7 @@ Now, what if have defined the data in variable above and want to use it in beow 
 
 **Getting the value of input feild**
 
+**Getting the values of checkboxes and radio-buttons**
 
+*for in label is used to select the checkbox or radio-button id it is assigned to.So, that even on the click on the label the respected checkbox or radio-button is selected.*
     
