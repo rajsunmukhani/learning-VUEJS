@@ -267,3 +267,37 @@ Now, what if have defined the data in variable above and want to use it in beow 
         }
     }
 </script>
+
+**VueJS Events**
+
+1. Create a button in template as:
+    *<button type="button">Click me</button>*
+
+2. Apply on click event to the button as:
+    *<button v-on:click="test()" type="button">Click me</button>*
+    
+3. Now create test method in script as:
+    methods : {
+        test(){
+            alert('func running successfully!')
+        }
+    }
+
+4. Now, we will make a variable named *count* in script using data attribute as:
+    data(){
+        return {
+            count : 0,
+        }
+    },
+
+5. And, further we will just use the count variable in our view section i.e. 'template' as:
+    *<h2>Current Count is : {{ count }}</h2>*
+
+6. Now,to update the value of count variable and display it dynamically on our view, we will update the function test as:
+    methods : {
+        test(){
+            this.count+=1;
+        }
+    }
+
+7. And, hence we made the function to update the value of count variable on click of the button function.
