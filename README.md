@@ -305,4 +305,11 @@ Now, what if have defined the data in variable above and want to use it in beow 
 8. Also, we can apply some more event listeners as:
     *v-on:dblclick* or *@:dblclick* also,
     *v-on:mousemove* or *@:mousemove* etc.
+
+
+**Two way binding of form inputs in VUE.**
+
+=> In Vue JS, it is very simple to apply two way binding in input fields, just we have to use a attribute named *v-model* with the variable name where we want to store the data after binding, and two way binding is completed.
+
+
     
