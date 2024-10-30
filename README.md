@@ -311,5 +311,7 @@ Now, what if have defined the data in variable above and want to use it in beow 
 
 => In Vue JS, it is very simple to apply two way binding in input fields, just we have to use a attribute named *v-model* with the variable name where we want to store the data after binding, and two way binding is completed.
 
+**Getting the value of input feild**
+
 
     
