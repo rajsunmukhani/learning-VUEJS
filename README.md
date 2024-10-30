@@ -316,4 +316,23 @@ Now, what if have defined the data in variable above and want to use it in beow 
 **Getting the values of checkboxes and radio-buttons**
 
 *for in label is used to select the checkbox or radio-button id it is assigned to.So, that even on the click on the label the respected checkbox or radio-button is selected.*
+
+**Conditional statements in Vue (If/Else)**
+
+To apply the conditional statements in Vue, we need to simply add the attribute to the div or html element as: *v-if="condition"* and *v-else* i.e. : 
+
+    <h2 v-if="show">show</h2>
+    <h2 v-else>dont show</h2>
+
+Also, don forget to make the variable in script tag as:
+     export default {
+        name : 'HelloComponent',
+        data(){
+            return {
+                show : true
+            }
+        }
+    }
+
+*Now, just change the value of show manually and see the changes.*
     
