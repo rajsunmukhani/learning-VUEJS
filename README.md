@@ -301,3 +301,8 @@ Now, what if have defined the data in variable above and want to use it in beow 
     }
 
 7. And, hence we made the function to update the value of count variable on click of the button function.
+
+8. Also, we can apply some more event listeners as:
+    *v-on:dblclick* or *@:dblclick* also,
+    *v-on:mousemove* or *@:mousemove* etc.
+    
